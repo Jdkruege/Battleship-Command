@@ -8,9 +8,11 @@ public abstract class AIScript : MonoBehaviour
 
     public abstract void Awake();
 
+    public abstract void Update();
+
     public abstract void Move();
 
     public abstract bool CanShoot(Gun gun);
 
-    public abstract void Shoot(Gun gun, GameObject ammo, GameObject target);
+    public abstract void Shoot(Gun gun);
 }
