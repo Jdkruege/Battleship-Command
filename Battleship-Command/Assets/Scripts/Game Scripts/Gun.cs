@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     public float range;
     public bool enabled;
     public int cooldown;
-    private int timeOut;
+    private int timeOut=0;
 
 	public void Start ()
     {
@@ -28,17 +28,21 @@ public class Gun : MonoBehaviour
     private bool CanShoot()
     {
         float distance = (target.GetComponent<Rigidbody2D>().position - this.GetComponent<Rigidbody2D>().position).magnitude;
-
-        if (timeOut > 0)
+        if (enabled)
         {
-            timeOut--;
-            return false;
+            if (timeOut > 0)
+            {
+                timeOut--;
+                return false;
+            }
+            else
+            {
+                timeOut = cooldown;
+                return (distance < range);
+            }
         }
         else
-        {
-            timeOut = cooldown;
-            return (distance < range);
-        }
+            return false;
     }
 
     private void Shoot()

@@ -43,7 +43,7 @@ public class Player : MonoBehaviour {
                 gun.transform.parent = this.transform;
                 gun.transform.position = this.transform.position + new Vector3(0f, 0.82f * i, 0f);
                 gun.GetComponent<Gun>().target = this.gameObject;
-                gun.GetComponent<Gun>().ammo = controller.GetComponent<Resources>().enemyBullet;
+                gun.GetComponent<Gun>().ammo = controller.GetComponent<Resources>().allyBullet;
                 gun.GetComponent<Gun>().range = 15;
                 gun.GetComponent<Gun>().cooldown = 60;
                 gun.GetComponent<Gun>().enabled = false;
