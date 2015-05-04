@@ -4,7 +4,15 @@ using System.Collections.Generic;
 
 public abstract class AIScript : MonoBehaviour
 {
-    public abstract bool CanShoot();
+    protected List<Gun> guns;
 
-    public abstract void Shoot(GameObject ammo);
+    public abstract void Awake();
+
+    public abstract void Update();
+
+    public abstract void Move();
+
+    public abstract bool CanShoot(Gun gun);
+
+    public abstract void Shoot(Gun gun);
 }
