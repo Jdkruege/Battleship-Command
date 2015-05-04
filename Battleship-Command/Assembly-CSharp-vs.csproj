@@ -48,7 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Game Scripts\AIScript.cs" />
      <Compile Include="Assets\Scripts\Game Scripts\IsTargetable.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Joystick.cs" />
+     <Compile Include="Assets\Scripts\Game Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Game Scripts\Resources.cs" />
      <Compile Include="Assets\Scripts\Game Scripts\Shoot.cs" />
      <Compile Include="Assets\Scripts\Menu Scripts\Exit.cs" />
