@@ -6,14 +6,6 @@ using System.Collections;
  */
 public class IsTargetable : MonoBehaviour
 {
-    private GameObject controller;
-
-
-    public void Start()
-    {
-        controller = GameObject.Find("Controller");
-    }
-
     public void OnMouseDown()
     {
         Player.getPlayer().targetShip(this);

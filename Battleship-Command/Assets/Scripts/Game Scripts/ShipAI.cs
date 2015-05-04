@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShipAI : AIScript
 {    
-	public override void Awake()
+	public override void Start()
     {
 
     }
@@ -18,12 +18,12 @@ public class ShipAI : AIScript
 
     }
 
-    public override bool CanShoot(Gun gun)
+    public override bool CanShoot(GameObject gun)
     {
         return false;
     }
 
-    public override void Shoot(Gun gun)
+    public override void Shoot(GameObject gun)
     {
 
     }

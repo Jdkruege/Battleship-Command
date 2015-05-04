@@ -15,9 +15,9 @@ public class Gun : MonoBehaviour
 	
 	public void Update ()
     {
-        if (parent.GetComponent<AIScript>().CanShoot(this))
+        if (parent.GetComponent<AIScript>().CanShoot(this.gameObject))
         {
-            parent.GetComponent<AIScript>().Shoot(this);
+            parent.GetComponent<AIScript>().Shoot(this.gameObject);
         }
 	}
 }
