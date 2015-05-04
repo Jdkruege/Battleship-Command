@@ -52,12 +52,19 @@ public class PaperHolder : MonoBehaviour {
     {
         GameObject paper = GameObject.Instantiate(samplePaper);
 
+        paper.GetComponent<SpriteRenderer>().sortingLayerName = "Paper";
+        paper.GetComponent<SpriteRenderer>().sortingOrder = -1 * papers.Count;
+
         paper.transform.FindChild("MissionText").GetComponent<MeshRenderer>().sortingLayerName = "Paper";
+        paper.transform.FindChild("MissionText").GetComponent<MeshRenderer>().sortingOrder = -1 * papers.Count;
         paper.transform.FindChild("MissionText").GetComponent<TextMesh>().text = "Mission: " + name + "\nMission Type: " + type;
             
         paper.transform.FindChild("DescriptionText").GetComponent<MeshRenderer>().sortingLayerName = "Paper";
+        paper.transform.FindChild("DescriptionText").GetComponent<MeshRenderer>().sortingOrder = -1 * papers.Count;
         paper.transform.FindChild("DescriptionText").GetComponent<TextMesh>().text = description;
-        
+
+        paper.transform.FindChild("AcceptButton").GetComponent<SpriteRenderer>().sortingLayerName = "Paper";
+        paper.transform.FindChild("AcceptButton").GetComponent<SpriteRenderer>().sortingOrder = -1 * papers.Count;
         paper.transform.FindChild("AcceptButton").GetComponent<AcceptMission>().scene = sceneToLoad;
 
         return paper;

@@ -47,9 +47,9 @@ TagManager:
   - name: Text
     uniqueID: 2260178205
     locked: 0
-  - name: Buttons
-    uniqueID: 855153165
-    locked: 0
   - name: Paper
     uniqueID: 409464581
+    locked: 0
+  - name: Buttons
+    uniqueID: 855153165
     locked: 0
