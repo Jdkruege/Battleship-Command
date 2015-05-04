@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Missions>
+  <Mission>
+    <Name>Basic</Name>
+    <Type>Attack</Type>
+    <Description>I don't really know actually</Description>
+    <Scene>Mission</Scene>
+  </Mission>
+</Missions>
