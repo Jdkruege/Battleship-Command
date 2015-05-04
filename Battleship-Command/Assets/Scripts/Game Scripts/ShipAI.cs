@@ -18,8 +18,8 @@ public class ShipAI : AIScript
         player = GameObject.Find("Player");
         rigidBody = GetComponent<Rigidbody2D>();
         interval = 60;
-        timeOut = 0;
-        speed = 0.5f;
+        timeOut = interval;
+        speed = 0.1f;
     }
 	
 	public override void Update ()
@@ -33,6 +33,7 @@ public class ShipAI : AIScript
                 gun.transform.position = this.transform.position + new Vector3(0f, 0.82f * i, 0f);
                 gun.GetComponent<Gun>().target = player;
                 gun.GetComponent<Gun>().ammo = controller.GetComponent<Resources>().enemyBullet;
+                guns.Add(gun);
             }
         }
 
@@ -47,7 +48,7 @@ public class ShipAI : AIScript
         if (distance < 10 && distance > 3)
         {
             float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
-            rigidBody.MoveRotation(angle - 90f);
+            rigidBody.MoveRotation(angle);
             rigidBody.MovePosition(rigidBody.position + speed * direction.normalized);
         }
     }

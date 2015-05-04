@@ -97,7 +97,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		}
 
 
-		public void OnPointerDown(PointerEventData data) {}
+		public void OnPointerDown(PointerEventData data) { Debug.Log("Mouse Click!"); }
 
 		void OnDisable()
 		{
