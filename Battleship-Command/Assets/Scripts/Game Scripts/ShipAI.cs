@@ -20,23 +20,20 @@ public class ShipAI : AIScript
         interval = 60;
         timeOut = interval;
         speed = 0.1f;
+
+        for (int i = -1; i < 2; i++)
+        {
+            GameObject gun = Instantiate(controller.GetComponent<Resources>().gun);
+            gun.transform.parent = this.transform;
+            gun.transform.position = this.transform.position + new Vector3(0f, 0.82f * i, 0f);
+            gun.GetComponent<Gun>().target = player;
+            gun.GetComponent<Gun>().ammo = controller.GetComponent<Resources>().enemyBullet;
+            guns.Add(gun);
+        }
     }
 	
 	public override void Update ()
     {
-        if (guns.Count == 0)
-        {
-            for (int i = -1; i < 2; i++)
-            {
-                GameObject gun = Instantiate(controller.GetComponent<Resources>().gun);
-                gun.transform.parent = this.transform;
-                gun.transform.position = this.transform.position + new Vector3(0f, 0.82f * i, 0f);
-                gun.GetComponent<Gun>().target = player;
-                gun.GetComponent<Gun>().ammo = controller.GetComponent<Resources>().enemyBullet;
-                guns.Add(gun);
-            }
-        }
-
         Move();
 	}
 

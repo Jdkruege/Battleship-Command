@@ -75,8 +75,5 @@ public class Player : MonoBehaviour {
         {
             targetCount++;
         }
-
-
-
     }
 }

@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
 {
     public Vector2 origin;
     public Vector2 direction;
+    public bool IsEnemyBullet;
     private Rigidbody2D rigidBody;
     private float speed;
     private float distanceTravelled;
@@ -23,15 +24,15 @@ public class Bullet : MonoBehaviour
 
         if (distanceTravelled > 10)
         {
-            Destroy(this.transform.gameObject);
+            Destroy(gameObject);
         }
 	}
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.Equals(GameObject.Find("Player")))
+        if (IsEnemyBullet && collision.gameObject.name == "Player")
         {
-            Destroy(this.transform.gameObject);
+            Destroy(gameObject);
         }
     }
 }
