@@ -12,7 +12,4 @@ public abstract class AIScript : MonoBehaviour
 
     public abstract void Move();
 
-    public abstract bool CanShoot(GameObject gun);
-
-    public abstract void Shoot(GameObject gun);
 }

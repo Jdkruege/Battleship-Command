@@ -50,27 +50,5 @@ public class ShipAI : AIScript
         }
     }
 
-    public override bool CanShoot(GameObject gun)
-    {
-        float distance = (player.GetComponent<Rigidbody2D>().position - rigidBody.position).magnitude;
-        
-        if (timeOut > 0)
-        {
-            timeOut--;
-            return false;
-        }
-        else
-        {
-            timeOut = interval;
-            return (distance < 10);
-        }
-    }
 
-    public override void Shoot(GameObject gun)
-    {
-        GameObject bullet = Instantiate(gun.GetComponent<Gun>().ammo);
-        bullet.transform.position = gun.transform.position;
-        bullet.GetComponent<Bullet>().direction = (player.GetComponent<Rigidbody2D>().position - gun.GetComponent<Rigidbody2D>().position).normalized;
-        bullet.GetComponent<Bullet>().origin = gun.GetComponent<Rigidbody2D>().position;
-    }
 }
