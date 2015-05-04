@@ -5,10 +5,15 @@ public class Player : MonoBehaviour {
 
     Vector3 pastPosition;
     Transform joystick;
+    float currentrot;
+    Rigidbody2D body;
 	// Use this for initialization
-	void Start () {
+    void Start()
+    {
+        body = GetComponent<Rigidbody2D>();
         joystick = transform.FindChild("MobileSingleStickControl").gameObject.transform.FindChild("MobileJoystick").gameObject.transform;
         pastPosition = joystick.transform.position;
+        currentrot = 0;
 	}
 	
 	// Update is called once per frame
@@ -18,8 +23,14 @@ public class Player : MonoBehaviour {
 
     private void steer()
     {
+        float forwardvel = (joystick.transform.position - pastPosition).y / 1000;
+        body.MovePosition(transform.position + transform.up * forwardvel);
 
 
-        transform.position += ( joystick.transform.position-pastPosition ) / 500;
+        float rotvel = (joystick.transform.position - pastPosition).x/200 ;
+        currentrot += rotvel;
+        body.MoveRotation(currentrot);
+
     }
+
 }
