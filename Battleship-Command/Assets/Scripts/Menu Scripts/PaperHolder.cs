@@ -65,13 +65,13 @@ public class PaperHolder : MonoBehaviour {
 
     public void ForwardAPage()
     {
-        //Flip to next page
+        //Flip to next page till end
         Debug.Log("Forward!");
     }
 
     public void BackwardAPage()
     {
-        //Flip to last page
+        //Flip to last page till front
         Debug.Log("Backward!");
     }
 }
