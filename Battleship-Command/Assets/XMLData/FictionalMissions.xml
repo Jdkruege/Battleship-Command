@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Missions>
+  <Mission>
+    <Name>Rescue Washington</Name>
+    <Type>Escort</Type>
+    <Description>
+Gotta rescue the main president
+or else. Things happen?
+    </Description>
+    <Scene>Mission</Scene>
+  </Mission>
+</Missions>
