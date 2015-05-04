@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ShipAI : AIScript
 {
@@ -12,6 +13,7 @@ public class ShipAI : AIScript
 
 	public override void Start()
     {
+        guns = new List<GameObject>();
         controller = GameObject.Find("Controller");
         player = GameObject.Find("Player");
         rigidBody = GetComponent<Rigidbody2D>();

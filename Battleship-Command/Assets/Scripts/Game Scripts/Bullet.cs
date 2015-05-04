@@ -5,9 +5,9 @@ public class Bullet : MonoBehaviour
 {
     public Vector2 origin;
     public Vector2 direction;
-    public Rigidbody2D rigidBody;
-    public float speed;
-    public float distanceTravelled;
+    private Rigidbody2D rigidBody;
+    private float speed;
+    private float distanceTravelled;
 
 	public void Start()
     {
