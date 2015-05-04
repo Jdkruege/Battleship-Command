@@ -28,6 +28,9 @@ public class ShipAI : AIScript
             gun.transform.position = this.transform.position + new Vector3(0f, 0.82f * i, 0f);
             gun.GetComponent<Gun>().target = player;
             gun.GetComponent<Gun>().ammo = controller.GetComponent<Resources>().enemyBullet;
+            gun.GetComponent<Gun>().range = 10;
+            gun.GetComponent<Gun>().cooldown = 60;
+            gun.GetComponent<Gun>().enabled = true;
             guns.Add(gun);
         }
     }

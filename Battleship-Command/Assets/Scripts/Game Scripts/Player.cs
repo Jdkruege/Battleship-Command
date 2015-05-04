@@ -42,7 +42,7 @@ public class Player : MonoBehaviour {
                 GameObject gun = Instantiate(controller.GetComponent<Resources>().gun);
                 gun.transform.parent = this.transform;
                 gun.transform.position = this.transform.position + new Vector3(0f, 0.82f * i, 0f);
-                gun.GetComponent<Gun>().target = player;
+                gun.GetComponent<Gun>().target = this.gameObject;
                 gun.GetComponent<Gun>().ammo = controller.GetComponent<Resources>().enemyBullet;
                 gun.GetComponent<Gun>().range = 15;
                 gun.GetComponent<Gun>().cooldown = 60;
@@ -89,10 +89,10 @@ public class Player : MonoBehaviour {
         reticle.transform.name = "Reticle";
         targetQueue.AddLast(target);
 
-        guns.get(oldestGun).GetComponent<Gun>().target = target;
-        guns.get(oldestGun).GetComponent<Gun>().enabled = true;
+        guns[oldestGun].GetComponent<Gun>().target = target.gameObject;
+        guns[oldestGun].GetComponent<Gun>().enabled = true;
         oldestGun++;
-        if (oldestGun > guns.Count)
+        if (oldestGun >= guns.Count)
             oldestGun = 0;
 
         // if we have more than three targets, forget the oldest, destroying one of it's reticles

@@ -27,7 +27,7 @@ public class Gun : MonoBehaviour
 
     private bool CanShoot()
     {
-        float distance = (player.GetComponent<Rigidbody2D>().position - rigidBody.position).magnitude;
+        float distance = (target.GetComponent<Rigidbody2D>().position - this.GetComponent<Rigidbody2D>().position).magnitude;
 
         if (timeOut > 0)
         {
@@ -41,12 +41,12 @@ public class Gun : MonoBehaviour
         }
     }
 
-    private override void Shoot()
+    private void Shoot()
     {
         GameObject bullet = Instantiate(ammo);
         bullet.transform.position = transform.position;
-        bullet.GetComponent<Bullet>().direction = (target.GetComponent<Rigidbody2D>().position - gun.GetComponent<Rigidbody2D>().position).normalized;
-        bullet.GetComponent<Bullet>().origin = gun.GetComponent<Rigidbody2D>().position;
+        bullet.GetComponent<Bullet>().direction = (target.GetComponent<Rigidbody2D>().position - this.GetComponent<Rigidbody2D>().position).normalized;
+        bullet.GetComponent<Bullet>().origin = this.GetComponent<Rigidbody2D>().position;
     }
 
 
