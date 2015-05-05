@@ -170,7 +170,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 499158, guid: fe6bc3ec5da10e24eba6416d2660b05c, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe6bc3ec5da10e24eba6416d2660b05c, type: 2}
@@ -285,7 +285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443108, guid: a9d63a1506be27a4ab47e663e924737c, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5054996, guid: a9d63a1506be27a4ab47e663e924737c, type: 2}
       propertyPath: m_AngularDrag

@@ -15,7 +15,7 @@ GameObject:
   - 50: {fileID: 5011444}
   m_Layer: 0
   m_Name: EnemyShip
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   rotspeed: .100000001
+  maxhealth: 8
 --- !u!212 &21293814
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -27,9 +27,16 @@ public class Gun : MonoBehaviour
 
     private bool CanShoot()
     {
-        float distance = (target.GetComponent<Rigidbody2D>().position - this.GetComponent<Rigidbody2D>().position).magnitude;
         if (enabled)
         {
+            if (!target)
+            {
+                enabled = false;
+                return false;
+            }
+
+            float distance = (target.GetComponent<Rigidbody2D>().position - this.GetComponent<Rigidbody2D>().position).magnitude;
+        
             if (timeOut > 0)
             {
                 timeOut--;

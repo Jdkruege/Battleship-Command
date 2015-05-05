@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class Player : MonoBehaviour {
     private static Player playerinstance;
@@ -113,12 +114,29 @@ public class Player : MonoBehaviour {
         {
 
             IsTargetable detarget = targetQueue.First.Value;
-            Destroy(detarget.transform.FindChild("Reticle").gameObject);
+            
+            //If the targetted ship still exists
+            if (detarget)
+            {
+                Destroy(detarget.transform.FindChild("Reticle").gameObject);
+            }
+
             targetQueue.RemoveFirst();
         }
         else
         {
             targetCount++;
+        }
+    }
+
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+       
+
+       if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 }

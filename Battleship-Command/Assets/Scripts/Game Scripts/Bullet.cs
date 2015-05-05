@@ -28,11 +28,5 @@ public class Bullet : MonoBehaviour
         }
 	}
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (IsEnemyBullet && collision.gameObject.name == "Player")
-        {
-            Destroy(gameObject);
-        }
-    }
+
 }

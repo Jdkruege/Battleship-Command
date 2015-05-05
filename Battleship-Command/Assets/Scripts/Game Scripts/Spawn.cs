@@ -17,6 +17,7 @@ public class Spawn : MonoBehaviour {
     public void spawn()
     {
         GameObject newship = Instantiate(toSpawn);
+        newship.transform.position = transform.position;
     }
 
 }
