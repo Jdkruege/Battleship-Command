@@ -6,18 +6,20 @@ public class ShipAI : AIScript
 {
     private GameObject controller;
     private Rigidbody2D rigidBody;
-    private int timeOut;
-    private int interval;
+
     public float speed;
     public float rotspeed;
+
+    public int maxhealth;
+    private int health;
+
 
 	public override void Start()
     {
         guns = new List<GameObject>();
         controller = GameObject.Find("Controller");
         rigidBody = GetComponent<Rigidbody2D>();
-        interval = 60;
-        timeOut = interval;
+        health = maxhealth;
 
         for (int i = -1; i < 2; i++)
         {
@@ -46,13 +48,31 @@ public class ShipAI : AIScript
         float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
         float facing = Mathf.Atan2(transform.up.x, transform.up.y) * Mathf.Rad2Deg;
         rigidBody.MoveRotation(rigidBody.rotation + ((facing - angle) * rotspeed));
-        print((angle - rigidBody.rotation) * rotspeed);
 
-        if (distance < 10 && distance > 6)
+        if (distance < 18 && distance > 6)
         {
             rigidBody.velocity = speed * transform.up;
         }
     }
 
+    public void takeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("AllyBullet"))
+        {
+            takeDamage(1);
+            Destroy(collision.gameObject);
+        }
+
+
+    }
 
 }
