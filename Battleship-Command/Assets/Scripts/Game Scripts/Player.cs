@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEditor;
+
 
 public class Player : MonoBehaviour {
     private static Player playerinstance;

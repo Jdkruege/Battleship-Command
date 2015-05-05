@@ -1,0 +1,33 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 570  (ID=0x1086)
+    Vendor:   NVIDIA
+    VRAM:     1232 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.073 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1318 -> priority: 1 
+  Thread -> id: ca4 -> priority: 1 
+Platform assembly: C:\Users\Jonathan Krueger\Desktop\Battleship-Command\Battleship-Command\Battleship Command_Data\Managed\System.Xml.dll (this message is harmless)
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.500115 ms
+
+Unloading 56 unused Assets to reduce memory usage. Loaded Objects now: 257.
+Total: 0.131783 ms (FindLiveObjects: 0.009906 ms CreateObjectMapping: 0.011707 ms MarkObjects: 0.088856 ms  DeleteObjects: 0.021013 ms)
+
