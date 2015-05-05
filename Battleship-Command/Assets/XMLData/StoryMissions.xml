@@ -1,9 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Missions>
   <Mission>
-    <Name>Basic</Name>
-    <Type>Attack</Type>
-    <Description>I don't really know actually</Description>
-    <Scene>Mission</Scene>
+    <Name>Take Roosevelt to Tehran</Name>
+    <Type>Escort</Type>
+    <Description>
+President Roosevelt is heading to an
+important conference with Joseph
+Stalin, and Winston Churchill in
+Tehran, Iran. As the ship carrying
+President Roosevelt, ensure that he
+arrives safely at all cost.
+
+Historical Note:
+The Tehran conference was the first of
+many World War II conferences set up
+by the Big Three as summits to talk
+about plans for fighting Nazi
+Germany.
+    </Description>
+    <Scene>Void</Scene>
   </Mission>
 </Missions>

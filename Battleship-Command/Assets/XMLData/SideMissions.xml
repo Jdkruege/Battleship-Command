@@ -1,9 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Missions>
   <Mission>
-    <Name>Lincolns Quest</Name>
+    <Name>Engage the enemy</Name>
+    <Type>Naval Battle</Type>
+    <Description>Enemies are in our waters.</Description>
+    <Scene>Void</Scene>
+  </Mission>
+  <Mission>
+    <Name>Defend our port</Name>
+    <Type>Defense</Type>
+    <Description>Enemies are on their way.</Description>
+    <Scene>Void</Scene>
+  </Mission>
+  <Mission>
+    <Name>Take their port</Name>
     <Type>Port Capture</Type>
-    <Description>Making stuff up at this point</Description>
-    <Scene>Mission</Scene>
+    <Description>Let's take their port.</Description>
+    <Scene>Void</Scene>
+  </Mission>
+  <Mission>
+    <Name>Escort a damaged ship</Name>
+    <Type>Escort</Type>
+    <Description>Ensure our ship makes it back.</Description>
+    <Scene>Void</Scene>
   </Mission>
 </Missions>

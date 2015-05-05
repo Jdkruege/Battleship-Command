@@ -1,11 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Missions>
   <Mission>
-    <Name>Rescue Washington</Name>
-    <Type>Escort</Type>
+    <Name>Test out the Prototype</Name>
+    <Type>Prototype</Type>
     <Description>
-Gotta rescue the main president
-or else. Things happen?
+Good morning Commander,
+Today we have been entrusted to test
+out the new prototype they have been
+developing for the Battleship Iowa.
+
+The new prototype looks very slick,
+but be aware that any issues are
+due to the prototype status. Be sure
+to note any issues you see, and make
+sure to tell the scientist about any
+issues.
+
+Make us proud out there commander.
+
+Admiral John Doe.
     </Description>
     <Scene>Mission</Scene>
   </Mission>

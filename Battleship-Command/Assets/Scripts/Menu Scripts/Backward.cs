@@ -25,6 +25,5 @@ public class Backward : MonoBehaviour {
     public void OnMouseDown()
     {
         paperHolder.GetComponent<PaperHolder>().BackwardAPage();
-        //Hello
     }
 }

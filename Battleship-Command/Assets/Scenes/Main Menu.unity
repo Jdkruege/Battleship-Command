@@ -233,6 +233,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 135653770}
   - 212: {fileID: 135653769}
+  - 58: {fileID: 135653772}
+  - 114: {fileID: 135653771}
   m_Layer: 0
   m_Name: Right Arrow
   m_TagString: Untagged
@@ -278,6 +280,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 633817717}
   m_RootOrder: 5
+--- !u!114 &135653771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 135653768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf297292ff049654895def7a3efa5c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paperHolder: {fileID: 648266841}
+--- !u!58 &135653772
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 135653768}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.27999997
 --- !u!1 &167381704
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   samplePaper: {fileID: 167484, guid: f1c42f1be6014a64abe5efb84c585ed6, type: 2}
   index: 0
+  xTranslate: 7.0999999
 --- !u!1 &689525628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,6 +1223,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1015594714}
   - 212: {fileID: 1015594713}
+  - 58: {fileID: 1015594716}
+  - 114: {fileID: 1015594715}
   m_Layer: 0
   m_Name: Left Arrow
   m_TagString: Untagged
@@ -1240,6 +1270,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 633817717}
   m_RootOrder: 4
+--- !u!114 &1015594715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015594712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320cd56c363521645aaf2ff5efef978e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paperHolder: {fileID: 648266841}
+--- !u!58 &1015594716
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015594712}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.27999997
 --- !u!1 &1033570242
 GameObject:
   m_ObjectHideFlags: 0
