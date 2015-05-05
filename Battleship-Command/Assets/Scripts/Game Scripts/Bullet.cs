@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
 	public void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        speed = 0.05f;
+        speed = 0.1f;
         distanceTravelled = 0f;
 	}
 	

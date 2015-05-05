@@ -8,6 +8,9 @@ public class Player : MonoBehaviour {
     Transform joystick;
     float currentrot;
 
+    public float rotspeed;
+    public float speed;
+
     private GameObject controller;
 
     Rigidbody2D body;
@@ -19,6 +22,8 @@ public class Player : MonoBehaviour {
     protected List<GameObject> guns;
     //This is the index of the gun that is assigned to the oldest target
     private int oldestGun=0;
+
+    private bool joystickenabled= false;
 
     // Use this for initialization
     void Start()
@@ -60,13 +65,20 @@ public class Player : MonoBehaviour {
 
     private void steer()
     {
-        float forwardvel = (joystick.transform.position - pastPosition).y / 1000;
-        body.MovePosition(transform.position + transform.up * forwardvel);
+        if (joystickenabled)
+        {
+            float forwardvel = (joystick.transform.position - pastPosition).y / 1000;
+            body.MovePosition(transform.position + transform.up * forwardvel);
 
 
-        float rotvel = (joystick.transform.position - pastPosition).x/200 ;
-        currentrot -= rotvel;
-        body.MoveRotation(currentrot);
+            float rotvel = (joystick.transform.position - pastPosition).x / 200;
+            currentrot -= rotvel;
+            body.MoveRotation(currentrot);
+        }
+
+
+        body.velocity = speed * transform.up * Input.GetAxis("Vertical");
+        body.angularVelocity = -1 * rotspeed * Input.GetAxis("Horizontal"); 
 
     }
 
@@ -87,6 +99,7 @@ public class Player : MonoBehaviour {
         reticle.transform.parent = target.transform;
         reticle.transform.position = target.transform.position;
         reticle.transform.name = "Reticle";
+        reticle.layer = 1;
         targetQueue.AddLast(target);
 
         guns[oldestGun].GetComponent<Gun>().target = target.gameObject;
